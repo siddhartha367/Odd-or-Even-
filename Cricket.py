@@ -5,82 +5,6 @@ import random
 
 #funtions
 
-"""
-def user_batting():
-    user_score = 0
-    while True:
-        r=0
-        try:
-            user_run = int(input("Enter your run (1-6): "))
-            if not (1 <= user_run <= 6):
-                print("Invalid input! Enter number between 1 and 6.")
-                print("Re-bat!")
-                r=1
-                continue   # stay in loop and ask again
-        # valid input → proceed with game logic
-            #break
-        except ValueError:
-            print("Invalid input! Numbers only.")
-            print("Re-bat!")
-            r=1
-        if r==0:
-            computer_ball = random.randint(1, 6)
-            print(f"Computer chose: {computer_ball}")
-        if user_run == computer_ball:
-            print("That's out!")
-            print(f"Your score: {user_score}")
-            break
-        else:
-            user_score += user_run
-            print(f"Your score: {user_score}")
-    return user_score
-
-def computer_batting():
-    computer_score = 0
-    while True:
-        try:
-            user_ball = int(input("Enter your bowl (1-6): "))
-            if not (1 <= user_ball <= 6):
-                print("Invalid input! Enter number between 1 and 6.")
-                print("Re-bowl!")
-                continue
-            #break
-        except ValueError:
-            print("Invalid input! Numbers only.")
-            print("Re-bowl!")
-        computer_run = random.randint(1, 6)
-        print(f"Computer chose: {computer_run}")
-        if computer_run == user_ball:
-            print("Computer is out!")
-            print(f"Computer's score: {computer_score}")
-            break
-        else:
-            computer_score += computer_run
-            print(f"Computer's score: {computer_score}")
-    return computer_score
-
-
-def user_batting_1():
-    if user_batting() > computer_batting():
-        diff = user_batting() - computer_batting()
-        print(f"You won by {diff} runs!")
-    elif user_batting() < computer_batting():
-        diff = computer_batting() - user_batting()
-        print(f"Computer won by {diff} runs!")
-    else:
-        print(f"It's a tie! Both of you have {user_batting()} runs!")
-
-def computer_batting_1():
-    if computer_batting() > user_batting():
-        diff = computer_batting() - user_batting()
-        print(f"Computer won by {diff} runs!")
-    elif computer_batting() < user_batting():
-        diff = user_batting() - computer_batting()
-        print(f"You won by {diff} runs!")
-    else:
-        print(f"It's a tie! Both of you have {computer_batting()} runs!")
-"""
-
 def user_batting():
     user_score = 0
 
@@ -163,13 +87,6 @@ def computer_batting_1():
 
 print("Welcome to the Cricket Game!")
 print("")
-
-"""
-print("Let's play Odd or Even to decide who bats or bowls first.")
-user_choice = input("Choose Odd or Even: ").strip().lower()
-user_number = int(input("Enter a number between 1 and 6: "))
-"""
-
 print("Let's play Odd or Even to decide who bats or bowls first.")
 
 # Odd / Even choice
@@ -222,4 +139,5 @@ else:
     else:
         print("Computer is bowling first!")
         print("Good luck with your batting!")
+
         user_batting_1()
